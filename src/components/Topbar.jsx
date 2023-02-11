@@ -1,4 +1,6 @@
 import "./Topbar.css";
+import pokeballColor from "../images/pokeballColor.png";
+import pokeballBlack from "../images/pokeballBlack.png";
 const Topbar = () => {
   return (
     <div className="title">
@@ -7,7 +9,7 @@ const Topbar = () => {
         <div className="caught-seen">
           <div className="caught">
             <img
-              src="pokeball"
+              src={pokeballColor}
               alt="pokeball"
               style={{ width: "30px", marginRight: "10px" }}
             />
@@ -15,7 +17,7 @@ const Topbar = () => {
           </div>
           <div className="seen">
             <img
-              src="pokeball"
+              src={pokeballBlack}
               alt="pokeball"
               style={{ width: "30px", marginRight: "10px" }}
             />
