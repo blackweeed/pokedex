@@ -28,7 +28,7 @@ const PokemonCard = ({
       {isShown && (
         <div className="show">
           <div className="stat-container-title">
-            <img src={image} alt={name} />
+            <img className="image-title" src={image} alt={name} />
             <p style={{ width: "180px", color: "black" }}>No. {id}</p>
             <p>{name}</p>
             <img className="pokeball-title" src={pokeball} alt="pokeball" />
@@ -51,12 +51,12 @@ const PokemonCard = ({
           </div>
           <div className="base-stats">
             <div>
-              {statsName?.map((stats) => (
+              {statsName.map((stats) => (
                 <p className="stats">{stats}</p>
               ))}
             </div>
             <div>
-              {statsName?.map((stats) => (
+              {stats.map((stats) => (
                 <p className="stats">{stats}</p>
               ))}
             </div>

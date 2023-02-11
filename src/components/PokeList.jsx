@@ -26,13 +26,15 @@ const PokeList = () => {
     getAllPokemons();
   }, []);
 
+  console.log(allPokemons);
+
   return (
     <div className="app-container">
       <div className="pokemon-container">
         <div className="all-container">
           {allPokemons.map((pokemonStats) => (
             <PokemonCard
-              //   key={pokemonStats.id}
+              key={pokemonStats.name}
               id={pokemonStats.id.toString().padStart(3, "0")}
               image={
                 pokemonStats.sprites.other["official-artwork"].front_default
@@ -43,6 +45,9 @@ const PokeList = () => {
               height={pokemonStats.height}
               stats={pokemonStats.stats
                 .map((stat) => stat.base_stat)
+                .slice(0, 3)}
+              statsName={pokemonStats.stats
+                .map((stat) => stat.stat.name)
                 .slice(0, 3)}
             />
           ))}
